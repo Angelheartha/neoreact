@@ -1,5 +1,7 @@
 import React, { useState,useEffect} from "react";
 import Modal from "./components/Modal";
+import Default from "./components/Default";
+import Login from "./components/Login";
 import axios from "axios";
 import { useAlert } from 'react-alert'
 

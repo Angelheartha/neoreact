@@ -6,7 +6,6 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 
-
 class TodoView(viewsets.ModelViewSet):
 
     serializer_class = TodoSerializer

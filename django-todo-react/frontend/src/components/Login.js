@@ -2,15 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useCookies } from 'react-cookie';
 import axios from 'axios';
 import { useForm } from "react-hook-form";
-import  { useHistory } from 'react-router-dom';
+import  { useHistory } from '/react-router-dom';
 import { apiURL } from './Default';
 import Cookies from 'universal-cookie';
 const cookies = new Cookies();
 
-headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `JWT ${cookies.get('accesstoken')}`
-         }
+///headers: {
+         // 'Content-Type': 'application/json',
+          //'Authorization': `JWT ${cookies.get('accesstoken')}`
+        // }
 
 
 const Login = (props) => {

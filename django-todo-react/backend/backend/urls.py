@@ -25,6 +25,9 @@ from rest_framework_simplejwt.views import (
 )
 
 
+
+
+
 router = routers.DefaultRouter()
 router.register(r'todos', views.TodoView, 'todo')
 
@@ -35,4 +38,7 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
     path('api/v1/auth/', include('djoser.urls.jwt'))
+
+
+
 ]
