@@ -4887,6 +4887,11 @@
   "resolved" "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.1.tgz"
   "version" "1.15.1"
 
+"footer@^1.0.0":
+  "integrity" "sha512-sSdesgHf/ZxrvmuFSRhmQIA7YAfVT/RqnXzRYyeQpd93GG8nxmD6XcJvnKGf6YLKiNgDnwyCNaL8sL3811XiLg=="
+  "resolved" "https://registry.npmjs.org/footer/-/footer-1.0.0.tgz"
+  "version" "1.0.0"
+
 "for-each@^0.3.3":
   "integrity" "sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw=="
   "resolved" "https://registry.npmjs.org/for-each/-/for-each-0.3.3.tgz"
@@ -5432,6 +5437,11 @@
   "integrity" "sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw=="
   "resolved" "https://registry.npmjs.org/he/-/he-1.2.0.tgz"
   "version" "1.2.0"
+
+"header@^0.1.1":
+  "integrity" "sha512-UqVUZreZFsYs6LHyVHdLLUJKMVcsp1aAbg4hzvJz1eJ7FzPaVtruHcyQb5xdqe63XleCi6uMIrUyoqmEgpX1OA=="
+  "resolved" "https://registry.npmjs.org/header/-/header-0.1.1.tgz"
+  "version" "0.1.1"
 
 "hex-color-regex@^1.1.0":
   "integrity" "sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ=="
