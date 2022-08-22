@@ -1,9 +1,9 @@
 import React, { useState,useEffect} from "react";
 import Modal from "./components/Modal";
-import Default from "./components/Default";
-import Login from "./components/Login";
+
 import axios from "axios";
 import { useAlert } from 'react-alert'
+
 
 
 
@@ -203,10 +203,12 @@ const Act = (props) => {
     setIsModalOpen(true)
   }
 
-
+  //export const apiURL = 'http://localhost:8000/api/v1/';
   return (
     <main className="container">
       <div className="nav-container">
+
+
 
 
         <button

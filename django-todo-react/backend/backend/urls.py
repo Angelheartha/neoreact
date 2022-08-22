@@ -24,6 +24,13 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
+from django.urls import path, include
+from django.contrib import admin
+from rest_framework_simplejwt import views as jwt_views
+
+
+
+
 
 
 
@@ -34,11 +41,14 @@ router.register(r'todos', views.TodoView, 'todo')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
-    path('api/v1/auth/', include('djoser.urls.jwt'))
+
+  #  path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+   # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+   # path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
+   # path('api/v1/auth/', include('djoser.urls.jwt')),
 
 
-
+    path('api/token/', jwt_views.TokenObtainPairView.as_view(), name ='token_obtain_pair'),
+    path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name ='token_refresh'),
+    path('cores', include('core.urls')),
 ]

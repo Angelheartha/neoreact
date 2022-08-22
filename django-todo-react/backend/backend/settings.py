@@ -27,10 +27,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'todo',
-    'core.apps.CoreConfig',
     'rest_framework',
     'rest_framework.authtoken',
     'djoser',
+    'core',
 
 ]
 
@@ -130,14 +130,9 @@ CORS_ORIGIN_WHITELIST = [
 ]
 
 REST_FRAMEWORK = {
-        'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
-
-    'DEFAULT_AUTHENTICATION_CLASSES': (
+    'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-    ),
+    ]
 }
 
 
