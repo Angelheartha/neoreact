@@ -7,7 +7,7 @@ module.exports = {
         // options related to how webpack emits results
 
         // where compiled files go
-        path: path.resolve(__dirname, "backend/frontendend/static/frontend/public/"),
+        path: path.resolve(__dirname, "frontendend/static/frontend/public/"),
 
         // 127.0.0.1/static/frontend/public/ where files are served from
         publicPath: "/static/frontend/public/",
@@ -24,8 +24,7 @@ module.exports = {
                 // for matching files, use the babel-loader
                 use: {
                     loader: "babel-loader",
-                    options: {presets: ["@babel/preset-env",
-                                       "@babel/preset-react"]}
+                    options: {presets: ["@babel/env"]}
                 },
             }
         ],
