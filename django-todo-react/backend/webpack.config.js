@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     mode: "development",
-    entry: path.resolve(__dirname, 'backend/frontendend/src/index.js'),
+    entry: path.resolve(__dirname, 'frontendend/src/index.js'),
     output: {
         // options related to how webpack emits results
 
@@ -24,7 +24,8 @@ module.exports = {
                 // for matching files, use the babel-loader
                 use: {
                     loader: "babel-loader",
-                    options: {presets: ["@babel/env"]}
+                    options: {presets: ["@babel/preset-env",
+                                       "@babel/preset-react"]}
                 },
             }
         ],
