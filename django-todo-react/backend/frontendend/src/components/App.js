@@ -43,9 +43,9 @@ class App extends Component {
                     <h1>Ahhh after 10,000 years I'm free. Time to conquer the Earth!</h1>
 
                     <Routes>
-                        <Route path={"/login/"} element={Login}/>
-                        <Route path={"/signup/"} element={Signup}/>
-                        <Route path={"/hello/"} element={Hello}/>
+                        <Route exact path={"/login/"} element={Login}/>
+                        <Route exact path={"/signup/"} element={Signup}/>
+                        <Route exact path={"/hello/"} element={Hello}/>
                         <Route path={"/"} render={() => <div>Home again</div>}/>
                     </Routes>
                 </main>
