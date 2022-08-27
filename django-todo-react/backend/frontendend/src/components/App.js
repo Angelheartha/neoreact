@@ -46,7 +46,7 @@ class App extends Component {
                         <Route exact path={"/login/"} element={<Login />}/>
                         <Route exact path={"/signup/"} element={<Signup />}/>
                         <Route exact path={"/hello/"} element={<Hello />}/>
-                        <Route path={"/"} render={() => <div>Home again</div>}/>
+                        <Route path={"/"} render={() => <div>Home again</div>} />
                     </Routes>
                 </main>
             </div>
