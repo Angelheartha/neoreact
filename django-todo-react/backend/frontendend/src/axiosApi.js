@@ -1,3 +1,5 @@
+// djsr/frontend/src/axiosApi.js
+
 import axios from 'axios'
 
 const baseURL = 'http://127.0.0.1:8000/api/'
@@ -18,7 +20,7 @@ axiosInstance.interceptors.response.use(
     error => {
         const originalRequest = error.config;
 
-        // Prevent infinite loops
+        // Prevent infinite loops early
         if (error.response.status === 401 && originalRequest.url === baseURL+'token/refresh/') {
             window.location.href = '/login/';
             return Promise.reject(error);

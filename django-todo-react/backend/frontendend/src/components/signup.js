@@ -48,12 +48,12 @@ class Signup extends Component{
                     </label>
                     <label>
                         Email:
-                        <input name="email" type="email" value={this.state.email} onChange={this.handleChange}/>
+                        <input name="email" type="email"  value={this.state.email} onChange={this.handleChange}/>
                         { this.state.errors.email ? this.state.errors.email : null}
                     </label>
                     <label>
                         Password:
-                        <input name="password" type="password" value={this.state.password} onChange={this.handleChange}/>
+                        <input name="password" type="password"  value={this.state.password} onChange={this.handleChange}/>
                         { this.state.errors.password ? this.state.errors.password : null}
                     </label>
                     <input type="submit" value="Submit"/>

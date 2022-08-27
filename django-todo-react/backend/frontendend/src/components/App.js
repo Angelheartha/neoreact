@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
 import Login from "./login";
 import Signup from "./signup";
 import Hello from "./hello";
@@ -43,9 +43,9 @@ class App extends Component {
                     <h1>Ahhh after 10,000 years I'm free. Time to conquer the Earth!</h1>
 
                     <Routes>
-                        <Route exact path={"/login/"} element={Login}/>
-                        <Route exact path={"/signup/"} element={Signup}/>
-                        <Route exact path={"/hello/"} element={Hello}/>
+                        <Route exact path={"/login/"} element={<Login />}/>
+                        <Route exact path={"/signup/"} element={<Signup />}/>
+                        <Route exact path={"/hello/"} element={<Hello />}/>
                         <Route path={"/"} render={() => <div>Home again</div>}/>
                     </Routes>
                 </main>
