@@ -9,16 +9,9 @@ import axiosInstance from "../axiosApi";
 
 const App = () => {
 
-    //constructor() {
-     //   super();
-     //   this.handleLogout = this.handleLogout.bind(this);
-    //}
-
-    const [handleLogout,setHandleLogout] = useState("");
 
 
-
-    const async handleLogout = () => {
+    const handleLogout = async () => {
         try {
             const response = await axiosInstance.post('/blacklist/', {
                 "refresh_token": localStorage.getItem("refresh_token")
@@ -55,5 +48,5 @@ const App = () => {
                 </main>
             </div>
         );
-
+}
 export default App;
