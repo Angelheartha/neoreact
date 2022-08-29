@@ -3,18 +3,22 @@ import { BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
 import Login from "./login";
 import Signup from "./signup";
 import Hello from "./hello";
-
+import { useState,useEffect} from "react";
 import axiosInstance from "../axiosApi";
 
 
-class App extends Component {
+const App = () => {
 
-    constructor() {
-        super();
-        this.handleLogout = this.handleLogout.bind(this);
-    }
+    //constructor() {
+     //   super();
+     //   this.handleLogout = this.handleLogout.bind(this);
+    //}
 
-    async handleLogout() {
+    const [handleLogout,setHandleLogout] = useState("");
+
+
+
+    const async handleLogout = () => {
         try {
             const response = await axiosInstance.post('/blacklist/', {
                 "refresh_token": localStorage.getItem("refresh_token")
@@ -29,7 +33,7 @@ class App extends Component {
         }
     };
 
-    render() {
+
         return (
             <div className="site">
                 <nav>
@@ -37,7 +41,7 @@ class App extends Component {
                     <Link className={"nav-link"} to={"/login/"}>Login</Link>
                     <Link className={"nav-link"} to={"/signup/"}>Signup</Link>
                     <Link className={"nav-link"} to={"/hello/"}>Hello</Link>
-                    <button onClick={this.handleLogout}>Logout</button>
+                    <button onClick={handleLogout}>Logout</button>
                 </nav>
                 <main>
                     <h1>Ahhh after 10,000 years I'm free. Time to conquer the Earth!</h1>
@@ -51,7 +55,5 @@ class App extends Component {
                 </main>
             </div>
         );
-    }
-}
 
 export default App;
